@@ -46,7 +46,7 @@ UPDATE_SSL = True
 
 # 是否为腾讯云直播域名更换SSL证书的操作
 # 若UPDATE_LIVE_SSL = True 注意请将UPDATE_SSL、ENABLE_HSTS、ENABLE_OCSP、ENABLE_HTTP2 设置为 False
-UPDATE_LIVE_SSL = True
+UPDATE_LIVE_SSL = False
 
 CERT_ID = ""
 # 是否进行预热URL的操作

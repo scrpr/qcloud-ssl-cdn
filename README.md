@@ -56,7 +56,7 @@ docker run -d \
 * `UPDATE_SSL`: 是否进行为CDN_DOMAIN更换SSL证书的操作，默认为`True`
 * `PUSH_URLS`: 是否进行预热URL的操作，默认为`True`
 * `PURGE_URL`: 是否进行刷新URL的操作，默认为`True`
-* `UPDATE_LIVE_SSL`: 是否进行为云直播更换SSL证书的操作，默认为`True`
+* `UPDATE_LIVE_SSL`: 是否进行为云直播更换SSL证书的操作，默认为`False`
 
 
 

@@ -7,7 +7,8 @@ if [ "${ACME_ENABLED:=true}" = "true" ]; then
   ${ACME_HOME}/acme.sh ${ACME_PARAMS:-} --force --issue --cert-home ${CERT_HOME} -d ${ACME_DOMAIN} -d *.${ACME_DOMAIN} --dns ${ACME_DNS_TYPE}
   # 兼容ecc证书
   if [ -d "${CERT_HOME}/${ACME_DOMAIN}_ecc" ]; then
-    cp -rf ${CERT_HOME}/${ACME_DOMAIN}_ecc ${CERT_HOME}/${ACME_DOMAIN}
+    mkdir -p ${CERT_HOME}/${ACME_DOMAIN}
+    cp -rf ${CERT_HOME}/${ACME_DOMAIN}_ecc/* ${CERT_HOME}/${ACME_DOMAIN}
     echo "The ECC certificate is detected"
   fi
 fi

@@ -15,7 +15,7 @@ jobs:
 
       - name: Prepare Environment
         run: |
-          curl https://get.acme.sh | sh -s email=my@example.com
+          curl https://get.acme.sh | sh -s email=${{ secrets.ACCOUNT_EMAIL }}
           pip install -r requirements.txt
 
       - name: Update Cert
